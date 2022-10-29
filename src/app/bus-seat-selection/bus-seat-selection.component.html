@@ -1,0 +1,71 @@
+<div class="m-2">
+    <div class="row justify-content-evenly g-3">
+        <mat-card class="col" style="max-width: 280px; min-width: 280px;">
+            <mat-card-title>Seat selection</mat-card-title>
+            <mat-card-subtitle>Select seats</mat-card-subtitle>
+            <mat-card-content>
+                <div *ngIf="selectorLoading; else selector">
+                    <mat-spinner color="accent"></mat-spinner>
+                </div>
+                <ng-template style="width: 245px;" #selector>
+                    <form [formGroup]="seatSelectionForm">
+                        <h3 class="text-end pe-2 text-primary">Front</h3>
+                        <div class="form-check form-check-inline p-0 mx-1"
+                            *ngFor="let seat of seats.controls; let i=index" formArrayName="seats">
+                            <input type="checkbox" class="btn-check" id="seat-{{i}}" autocomplete="off"
+                                (change)="handleSeatSelectionChange($event, i)" [formControlName]="i">
+                            <label class="btn btn-outline-success btn-lg" for="seat-{{i}}"
+                                style="width: 48px; padding: 5px;">{{i | seatDisplayName}}</label>
+                            <span class="d-inline-block" style="width: 20px;" *ngIf="(i - 1)%4 == 0"></span>
+                        </div>
+                    </form>
+                </ng-template>
+            </mat-card-content>
+        </mat-card>
+        <!-- class="col-md-7 col-lg-8 col-xl-9 col-xxl-10 col-12 ms-md-3" -->
+        <!-- col-12 col-sm-6 col-md-7 ms-md-2 -->
+        <mat-card class="col-12 col-sm ms-sm-2">
+            <mat-card-title>Seat details</mat-card-title>
+            <mat-card-subtitle>Details of selected seats</mat-card-subtitle>
+            <mat-card-content>
+
+                <table mat-table [dataSource]="seatsSelected" class="w-100">
+
+                    <!-- <mat-text-column name="seatIndex" headerText="Seat" [dataAccessor]="getSeat"></mat-text-column>
+                <mat-text-column name="fare"></mat-text-column>
+                <mat-text-column name="class"></mat-text-column> -->
+
+                    <ng-container matColumnDef="seatIndex">
+                        <th mat-header-cell *matHeaderCellDef> Seat </th>
+                        <td mat-cell *matCellDef="let seat"> {{getSeat(seat.seatIndex)}} </td>
+                        <td mat-footer-cell *matFooterCellDef> Total </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="fare">
+                        <th mat-header-cell *matHeaderCellDef> Cost </th>
+                        <td mat-cell *matCellDef="let seat"> {{seat.fare | currency : 'INR'}} </td>
+                        <td mat-footer-cell *matFooterCellDef> {{getTotalFare() | currency : 'INR'}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="class">
+                        <th mat-header-cell *matHeaderCellDef> Class </th>
+                        <td mat-cell *matCellDef="let seat"> {{seat.class}} </td>
+                        <td mat-footer-cell *matFooterCellDef></td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="3">No seats selected. <span class="text-danger">Select
+                                seats</span>
+                        </td>
+                    </tr>
+                </table>
+            </mat-card-content>
+            <!-- <mat-card-actions *ngIf="seatsSelected.length">
+                <button mat-stroked-button class="w-100" [disabled]="!selectionChanged" color="warn" (click)="handleSeatSelectionConfirmed()">{{ selectionChanged ? 'Save selection' : 'Selection saved'}}</button>
+            </mat-card-actions> -->
+        </mat-card>
+    </div>
+</div>

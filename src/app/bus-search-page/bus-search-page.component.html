@@ -1,0 +1,10 @@
+<div class="container-lg py-2">
+    <mat-card>
+        <mat-card-title>Search Buses</mat-card-title>
+        <mat-card-subtitle>Select search options</mat-card-subtitle>
+        <app-bus-search-form (formSubmitEvent)="onSearchFormSubmit($event)"></app-bus-search-form>
+    </mat-card>
+    <div *ngIf="searchFormSubmitted" class="p-3">
+        <app-bus-search-result [busSearchParams]="searchParams"></app-bus-search-result>
+    </div>
+</div>

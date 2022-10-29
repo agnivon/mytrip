@@ -1,0 +1,16 @@
+<div class="container-lg py-2">
+    <mat-card class="bg-light">
+        <mat-card-title>Book Bus</mat-card-title>
+        <mat-card-subtitle>Enter booking details</mat-card-subtitle>
+        <mat-card-content>
+            <app-bus-seat-selection (seatSelectionConfirmed)="handleSeatsConfirmed($event)"></app-bus-seat-selection>
+            <app-bus-booking-form (passengerInfoConfirmed)="handlePassengerInfoConfirmed($event)">
+            </app-bus-booking-form>
+        </mat-card-content>
+        <mat-card-actions class="mb-2 d-flex justify-content-center">
+            <button mat-raised-button class="w-50 fs-4 p-1" color="accent"
+                [disabled]="seatsSelected.length == 0 || !passengerInfo" (click)="openConfirmDialog()">Confirm
+                details</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

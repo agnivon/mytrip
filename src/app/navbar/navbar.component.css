@@ -1,0 +1,8 @@
+.navbar-button-container > button {
+    font-size: 15px;
+}
+
+.mat-toolbar {
+    background: rgb(0, 0, 0, 0);
+    flex: auto;
+}

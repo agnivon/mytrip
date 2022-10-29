@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    min-height: 100vh;
+    flex: auto;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    min-width: 375px;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}

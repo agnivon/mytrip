@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Confirm Booking</h1>
+<hr class="mb-0">
+<div mat-dialog-content>
+  <mat-list role="list">
+    <mat-list-item role="listitem">{{data.source}}&nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i>&nbsp;&nbsp;{{data.destination}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Departure date and time: </b>&nbsp;{{data.dept_time | date : 'medium'}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Bus Name: </b>&nbsp;{{data.bus_name}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Coach Type: </b>&nbsp;{{data.coach_type}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Seats: </b>&nbsp;{{data.seats}}</mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button mat-dialog-close="true" cdkFocusInitial>Confirm</button>
+</div>

@@ -1,27 +1,43 @@
-# Mytrip
+# Problem Statement: Build an online bus ticket booking web application using Angular 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+## Background: 
+Mytrip.com is an online travel booking web application providing a range of choices for bus travelers. This web application is available 24 X 7 to book bus tickets across different cities. Mytrip.com is designed in old asp.net technology and is the fastest-growing web application with a customer base of approximately 1 million users. With the increase in web traffic, website load time has increased which in turn, has reduced the speed and performance of the website. Also, due to tight coupling of UI components, the development team faced issues to add or update any feature. Hence, all these challenges led to unsatisfied user experience. The company wants to focus on performance, responsive UI, and support for mobile devices. So, the company decided to upgrade its website using the Angular framework. 
 
-## Development server
+## Goal: 
+The goal of this project is to build an online Bus Ticket booking application with effortless seat selection and payment process using Angular framework.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Web Application Requirement: 
+Angular, HTML, and CSS 
 
-## Code scaffolding
+## Web Application Implementation: 
+The Web Application should include the following aspects: 
+1. Search buses for different routes
+2. Bus list page
+3. Seat selection page
+4. Passenger information page
+5. Review bus ticket page
+6. View bus ticket page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1. Search buses for different routes
 
-## Build
+![Mockup 1](/assets/mockup-1.png "Mockup 1")
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 2. Bus list page
 
-## Running unit tests
+![Mockup 2](/assets/mockup-2.png "Mockup 2")
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Seat selection page
 
-## Running end-to-end tests
+![Mockup 3](/assets/mockup-3.png "Mockup 3")
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 4. Passenger information page
 
-## Further help
+![Mockup 4](/assets/mockup-4.png "Mockup 4")
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 5. Review bus ticket page
+
+![Mockup 5](/assets/mockup-5.png "Mockup 5")
+
+### 6. View bus ticket page
+
+![Mockup 6](/assets/mockup-6.png "Mockup 6")

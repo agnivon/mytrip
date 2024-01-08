@@ -31,7 +31,7 @@ export class BusService {
   }
 
   getBuses(): Observable<Bus[]> {
-    return this.http.get<Bus[]>('/assets/buses.json').pipe(map((buses: Bus[]) => {
+    return this.http.get<Bus[]>('assets/buses.json').pipe(map((buses: Bus[]) => {
       const currentDate = Date.now()
       return buses.filter(bus => bus.dept_time > currentDate + (120 * 3600 * 1000));
     }));

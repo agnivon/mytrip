@@ -1,4 +1,4 @@
-# Problem Statement: Build an online bus ticket booking web application using Angular 
+# We are building an online bus ticket booking web application using Angular 
 
 ## Background: 
 Mytrip.com is an online travel booking web application providing a range of choices for bus travelers. This web application is available 24 X 7 to book bus tickets across different cities. Mytrip.com is designed in old asp.net technology and is the fastest-growing web application with a customer base of approximately 1 million users. With the increase in web traffic, website load time has increased which in turn, has reduced the speed and performance of the website. Also, due to tight coupling of UI components, the development team faced issues to add or update any feature. Hence, all these challenges led to unsatisfied user experience. The company wants to focus on performance, responsive UI, and support for mobile devices. So, the company decided to upgrade its website using the Angular framework. 
